@@ -33,4 +33,5 @@ export const ModeWord = styled.p`
 export const ModeIcon = styled.img`
   width: 20px;
   height: 20px;
+  cursor: pointer;
 `;

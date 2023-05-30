@@ -13,6 +13,13 @@ export const SearchStyle = styled.form`
   padding-bottom: 7px;
   column-gap: 2px;
   margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 10px;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+  }
 `;
 
 export const LeftBox = styled.div`
@@ -35,6 +42,7 @@ export const InputField = styled.input`
   font-weight: 400;
   font-size: 13px;
   line-height: 25px;
+  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
   background-color: ${(props) => (props.active ? "#FFFFFF" : "#1E2A47")};
 
   &::placeholder {
@@ -44,6 +52,14 @@ export const InputField = styled.input`
     font-size: 13px;
     line-height: 25px;
     color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+
+    &::placeholder {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -81,4 +97,9 @@ export const SearchButton = styled.button`
   text-align: center;
   color: #ffffff;
   padding: 12px 18px;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 `;

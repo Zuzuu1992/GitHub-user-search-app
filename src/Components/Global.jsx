@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
 body{
   font-family: 'Space Mono', monospace;
-  background-color:${(props) => (props.active ? "#F6F8FF" : "#141D2F")};
+
 
 }
 

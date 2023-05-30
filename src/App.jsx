@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Header from "./Components/Header";
 import Search from "./Components/Search";
 import Card from "./Components/Card";
 import GlobalStyles from "./Components/Global";
 import ContainerStyle from "./Components/Container.styled";
+import { Wrapper } from "./Components/wrapperstyled";
 
 const themeDark = {
   primary: "#141D2F",
@@ -22,11 +23,13 @@ const themeLight = {
 function App(active) {
   return (
     <ThemeProvider theme={active ? themeDark : themeLight}>
-      <ContainerStyle>
-        <GlobalStyles />
-        <Header active={active} />
-        {/* <Search active={active} /> */}
-      </ContainerStyle>
+      <Wrapper active={active}>
+        <ContainerStyle>
+          <GlobalStyles />
+          <Header active={active} />
+          {/* <Search active={active} /> */}
+        </ContainerStyle>
+      </Wrapper>
     </ThemeProvider>
   );
 }

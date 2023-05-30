@@ -45,7 +45,13 @@ function Card({ data, formattedDate, active }) {
   return (
     <>
       <CardStyle active={active}>
-        <DesktopAvatar></DesktopAvatar>
+        <DesktopAvatar
+          src={
+            data == false
+              ? "https://avatars.githubusercontent.com/u/583231?v=4"
+              : data?.avatar_url
+          }
+        ></DesktopAvatar>
         <Detailsbox>
           <UserBio>
             <Avatar
