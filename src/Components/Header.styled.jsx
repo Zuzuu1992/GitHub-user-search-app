@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HeaderStyle = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ export const LogoStyle = styled.h1`
   font-weight: 700;
   font-size: 26px;
   line-height: 39px;
-  color: #222731;
+  color: ${(props) => (props.active ? "#222731" : "#FFFFFF")};
 `;
 
 export const ModeBoxStyle = styled.div`
@@ -26,7 +26,7 @@ export const ModeWord = styled.p`
   line-height: 19px;
   text-align: right;
   letter-spacing: 2.5px;
-  color: #4b6a9b;
+  color: ${(props) => (props.active ? "#4b6a9b" : "#FFFFFF")};
   text-transform: uppercase;
 `;
 

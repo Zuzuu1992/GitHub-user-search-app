@@ -9,7 +9,7 @@ export const CardStyle = styled.div`
   padding-bottom: 49px;
   padding-right: 24px;
   padding-left: 24px;
-  background-color: #fefefe;
+  background-color: ${(props) => (props.active ? "#fefefe" : "#1E2A47")};
 `;
 
 export const DesktopAvatar = styled.img`
@@ -30,7 +30,7 @@ export const UserBio = styled.div`
 export const Avatar = styled.img`
   height: 70px;
   width: 70px;
-  /* border-radius: 50%; */
+  border-radius: 50%;
 `;
 
 export const UserDetails = styled.div`
@@ -48,7 +48,7 @@ export const UserName = styled.h1`
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: #2b3442;
+  color: ${(props) => (props.active ? "#2B3442" : "#FFFFFF")};
 `;
 
 export const Company = styled.p`
@@ -62,14 +62,14 @@ export const JoinDate = styled.p`
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: #697c9a;
+  color: ${(props) => (props.active ? "#697C9A" : "#FFFFFF")};
 `;
 
 export const Description = styled.p`
   font-weight: 400;
   font-size: 13px;
   line-height: 25px;
-  color: #4b6a9b;
+  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
   padding-top: 34px;
   padding-bottom: 23px;
 `;
@@ -78,7 +78,7 @@ export const CommunityBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #f6f8ff;
+  background-color: ${(props) => (props.active ? "#F6F8FF" : "#141D2F")};
   border-radius: 10px;
   padding: 18px 14px;
 `;
@@ -94,7 +94,7 @@ export const Repos = styled.p`
   font-size: 11px;
   line-height: 16px;
   text-align: center;
-  color: #4b6a9b;
+  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
 `;
 export const ReposNumber = styled.p`
   font-weight: 700;
@@ -102,7 +102,7 @@ export const ReposNumber = styled.p`
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: #2b3442;
+  color: ${(props) => (props.active ? "#2B3442" : "#FFFFFF")};
 `;
 
 export const FollowersBox = styled.div`
@@ -116,7 +116,7 @@ export const Followers = styled.p`
   font-size: 11px;
   line-height: 16px;
   text-align: center;
-  color: #4b6a9b;
+  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
 `;
 export const FollowersNumber = styled.p`
   font-weight: 700;
@@ -124,7 +124,7 @@ export const FollowersNumber = styled.p`
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: #2b3442;
+  color: ${(props) => (props.active ? "#2B3442" : "#FFFFFF")};
 `;
 
 export const FollowingBox = styled.div`
@@ -138,7 +138,7 @@ export const Following = styled.p`
   font-size: 11px;
   line-height: 16px;
   text-align: center;
-  color: #4b6a9b;
+  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
 `;
 export const FollowingNumber = styled.p`
   font-weight: 700;
@@ -146,7 +146,7 @@ export const FollowingNumber = styled.p`
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: #2b3442;
+  color: ${(props) => (props.active ? "#2B3442" : "#FFFFFF")};
 `;
 
 export const ContactDetails = styled.div`
@@ -166,7 +166,7 @@ export const Location = styled.p`
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: #4b6a9b;
+  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
 `;
 
 export const BlogBox = styled.div`
@@ -179,7 +179,7 @@ export const Blog = styled.p`
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: #4b6a9b;
+  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
 `;
 
 export const TwitterBox = styled.div`
@@ -193,7 +193,7 @@ export const Twitter = styled.p`
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: #4b6a9b;
+  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
 `;
 
 export const FirmBox = styled.div`
@@ -207,5 +207,5 @@ export const Firm = styled.p`
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: #4b6a9b;
+  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
 `;
