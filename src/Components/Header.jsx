@@ -11,9 +11,7 @@ import {
 } from "./Header.styled";
 import Search from "./Search";
 
-function Header() {
-  const [active, setActive] = useState(true);
-
+function Header({ active, setActive }) {
   function toggleTheme() {
     setActive(!active);
   }

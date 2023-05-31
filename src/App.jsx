@@ -20,13 +20,14 @@ const themeLight = {
   textBold: "#2B3442",
 };
 
-function App(active) {
+function App() {
+  const [active, setActive] = useState(true);
   return (
     <ThemeProvider theme={active ? themeDark : themeLight}>
       <Wrapper active={active}>
         <ContainerStyle>
           <GlobalStyles />
-          <Header active={active} />
+          <Header active={active} setActive={setActive} />
           {/* <Search active={active} /> */}
         </ContainerStyle>
       </Wrapper>
