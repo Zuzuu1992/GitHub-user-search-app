@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const CardStyle = styled.div`
   display: flex;
   flex-direction:column
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  box-shadow: ${(props) =>
+    props.active ? "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)" : "none"};
   border-radius: 15px;
   padding-top: 33px;
   padding-bottom: 49px;
@@ -13,6 +14,10 @@ export const CardStyle = styled.div`
 
   @media(min-width: 768px){
     padding:40px;
+    box-shadow: ${(props) =>
+      props.active
+        ? "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)"
+        : "none"};
   }
 
   @media(min-width: 1440px){
@@ -46,12 +51,21 @@ export const UserBio = styled.div`
   display: flex;
   align-items: center;
   column-gap: 19.5px;
+
+  @media (min-width: 768px) {
+    column-gap: 41px;
+  }
 `;
 
 export const Avatar = styled.img`
   height: 70px;
   width: 70px;
   border-radius: 50%;
+
+  @media (min-width: 768px) {
+    height: 117px;
+    width: 117px;
+  }
 
   @media (min-width: 1440px) {
     display: none;
@@ -250,7 +264,18 @@ export const Location = styled.p`
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
+  cursor: pointer;
+
+  color: ${(props) =>
+    props.active && props.data?.twitter_username
+      ? "#4B6A9B"
+      : !props.active && props.data?.twitter_username
+      ? "#FFFFFF"
+      : props.active && !props.data?.twitter_username
+      ? "rgba(75, 106, 155, 0.493)"
+      : !props.active && !props.data?.twitter_username
+      ? "rgba(255, 255, 255, 0.507)"
+      : null};
   @media (min-width: 768px) {
     font-size: 15px;
     line-height: 22px;
@@ -263,11 +288,20 @@ export const BlogBox = styled.div`
 `;
 export const BlogIcon = styled.img``;
 
-export const Blog = styled.p`
+export const Blog = styled.a`
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
+  color: ${(props) =>
+    props.active && props.data?.twitter_username
+      ? "#4B6A9B"
+      : !props.active && props.data?.twitter_username
+      ? "#FFFFFF"
+      : props.active && !props.data?.twitter_username
+      ? "rgba(75, 106, 155, 0.493)"
+      : !props.active && !props.data?.twitter_username
+      ? "rgba(255, 255, 255, 0.507)"
+      : null};
   @media (min-width: 768px) {
     font-size: 15px;
     line-height: 22px;
@@ -285,7 +319,17 @@ export const Twitter = styled.p`
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
+  cursor: pointer;
+  color: ${(props) =>
+    props.active && props.data?.twitter_username
+      ? "#4B6A9B"
+      : !props.active && props.data?.twitter_username
+      ? "#FFFFFF"
+      : props.active && !props.data?.twitter_username
+      ? "rgba(75, 106, 155, 0.493)"
+      : !props.active && !props.data?.twitter_username
+      ? "rgba(255, 255, 255, 0.507)"
+      : null};
   @media (min-width: 768px) {
     font-size: 15px;
     line-height: 22px;
@@ -303,7 +347,17 @@ export const Firm = styled.p`
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
-  color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
+  cursor: pointer;
+  color: ${(props) =>
+    props.active && props.data?.twitter_username
+      ? "#4B6A9B"
+      : !props.active && props.data?.twitter_username
+      ? "#FFFFFF"
+      : props.active && !props.data?.twitter_username
+      ? "rgba(75, 106, 155, 0.493)"
+      : !props.active && !props.data?.twitter_username
+      ? "rgba(255, 255, 255, 0.507)"
+      : null};
   @media (min-width: 768px) {
     font-size: 15px;
     line-height: 22px;

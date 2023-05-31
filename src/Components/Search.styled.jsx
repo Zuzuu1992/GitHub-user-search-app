@@ -4,7 +4,8 @@ export const SearchStyle = styled.form`
   display: flex;
   align-items: center;
   background-color: ${(props) => (props.active ? "#FFFFFF" : "#1E2A47")};
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  box-shadow: ${(props) =>
+    props.active ? "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)" : "none"};
   border-radius: 15px;
   justify-content: space-between;
   padding-left: 16px;
@@ -20,6 +21,10 @@ export const SearchStyle = styled.form`
     padding-top: 9.5px;
     padding-bottom: 9.5px;
   }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 24px;
+  }
 `;
 
 export const LeftBox = styled.div`
@@ -32,6 +37,11 @@ export const LeftBox = styled.div`
 export const SearchIcon = styled.img`
   width: 18px;
   height: 18px;
+
+  @media (min-width: 768px) {
+    width: 21px;
+    height: 21px;
+  }
 `;
 
 export const InputField = styled.input`
@@ -42,6 +52,7 @@ export const InputField = styled.input`
   font-weight: 400;
   font-size: 13px;
   line-height: 25px;
+  cursor: pointer;
   color: ${(props) => (props.active ? "#4B6A9B" : "#FFFFFF")};
   background-color: ${(props) => (props.active ? "#FFFFFF" : "#1E2A47")};
 
@@ -76,6 +87,10 @@ export const ErrorMobile = styled.p`
   color: #f74646;
   margin-top: -8px;
   margin-bottom: 8px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ErrorMessage = styled.p`
@@ -84,6 +99,10 @@ export const ErrorMessage = styled.p`
   font-size: 15px;
   line-height: 22px;
   color: #f74646;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 export const SearchButton = styled.button`
@@ -98,6 +117,11 @@ export const SearchButton = styled.button`
   color: #ffffff;
   padding: 12px 18px;
   cursor: pointer;
+  transition: all 2s;
+
+  &:hover {
+    background-color: #60abff;
+  }
 
   @media (min-width: 768px) {
     font-size: 16px;

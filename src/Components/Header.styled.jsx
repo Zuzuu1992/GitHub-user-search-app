@@ -27,11 +27,33 @@ export const ModeWord = styled.p`
   text-align: right;
   letter-spacing: 2.5px;
   color: ${(props) => (props.active ? "#4b6a9b" : "#FFFFFF")};
+  cursor: pointer;
   text-transform: uppercase;
+  transition: all 0.2s;
+
+  &:hover {
+    color: ${(props) => (props.active ? "#222731" : "#90A4D4")};
+  }
 `;
 
-export const ModeIcon = styled.img`
+export const ModeIcon1 = styled.svg`
   width: 20px;
   height: 20px;
   cursor: pointer;
+  transition: all 2s;
+
+  g:hover {
+    fill: #90a4d4;
+  }
+`;
+
+export const ModeIcon2 = styled.svg`
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 3s;
+
+  g:hover {
+    fill: #222731;
+  }
 `;
